@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEACE - The Voice Is Inside</title>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Loader styles */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--space-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .loader-content {
+            text-align: center;
+        }
+        
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--rust-red);
+            animation: spin 1s ease-in-out infinite;
+            margin: 0 auto 20px;
+        }
+        
+        .loader-text {
+            font-family: var(--font-title);
+            color: var(--clinical-white);
+            letter-spacing: 3px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading PEACE...</div>
+        </div>
+    </div>
+
+    <div class="scroll-container">
+        <!-- Title Frame -->
+        <div class="frame-container" data-video-ready="true" data-scene="title">
+            <div class="full-width-frame">
+                <div class="content-layer" data-parallax="0.1">
+                    <img src="processed_assets/ui/title_background.webp" alt="Starry space background">
+                </div>
+                <div class="overlay-layer" style="justify-content: center; align-items: center;">
+                    <h1 class="title fade-in">PEACE</h1>
+                    <h2 class="subtitle fade-in">The voice is inside</h2>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/title.mp4"></div>
+            </div>
+        </div>
+
+        <div class="decorative-line"></div>
+        <div class="decorative-symbol">✧</div>
+        <div class="decorative-line"></div>
+
+        <!-- Demata Exterior Introduction -->
+        <div class="frame-container" data-video-ready="true" data-scene="demata-exterior">
+            <div class="frame-inner cinematic-ratio">
+                <div class="content-layer">
+                    <img src="processed_assets/environments/demata_exterior.webp" alt="The Demata spacecraft exterior against starry background">
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption slide-in-left">
+                        <div class="caption-title">The Demata</div>
+                        <div class="caption-text">
+                            The enormous ark spacecraft drifts silently through space, 2.62 light years from Earth.
+                            Nearly every passenger is in deep-space sleep, in stasis for the journey to an outer-colony.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/demata-exterior.mp4"></div>
+            </div>
+        </div>
+
+        <!-- Rust-Red Wall Introduction -->
+        <div class="frame-container" data-video-ready="true" data-scene="rust-wall">
+            <div class="frame-inner standard-ratio">
+                <div class="content-layer">
+                    <div style="width: 100%; height: 100%; background-color: var(--rust-red);">
+                        <img src="processed_assets/environments/environment_page-01.png.webp" alt="Rust-red metal wall with emergency lights" style="opacity: 0.7; mix-blend-mode: overlay;">
+                    </div>
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption slide-in-right">
+                        <div class="caption-text">
+                            From blackness to a rust-red metal wall. Emergency lights cast long shadows.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/rust-wall.mp4"></div>
+            </div>
+        </div>
+
+        <!-- BOOM Sound Effect -->
+        <div class="frame-container" data-video-ready="true" data-scene="boom">
+            <div class="frame-inner standard-ratio">
+                <div class="content-layer">
+                    <div style="width: 100%; height: 100%; background-color: var(--space-black); display: flex; justify-content: center; align-items: center;">
+                        <div class="sound-effect fade-in">BOOOOOM!</div>
+                    </div>
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption">
+                        <div class="caption-text">
+                            Silence but for the low hum of heavy engines, far off. Then suddenly - impact.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/boom.mp4"></div>
+            </div>
+        </div>
+
+        <!-- Gaia Introduction -->
+        <div class="frame-container" data-video-ready="true" data-scene="gaia-intro">
+            <div class="character-frame">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/gaia_page-04.png.webp" alt="Gaia in white uniform, looking concerned">
+                        </div>
+                    </div>
+                    <div class="overlay-layer">
+                        <div class="caption slide-in-left">
+                            <div class="caption-title">A thief</div>
+                            <div class="caption-text">
+                                Gaia is used to having two voices inside. Her own, and that of the love of her life, Lane.
+                                When she wakes up from deep-space sleep, one voice is missing, and the other is panicked.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-layer" data-video-src="future-videos/gaia-intro.mp4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crew Introduction -->
+        <div class="frame-container" data-video-ready="true" data-scene="crew-intro">
+            <div class="frame-inner cinematic-ratio">
+                <div class="content-layer">
+                    <div class="gorey-character">
+                        <img src="processed_assets/characters/crew.webp" alt="Three crew members in space suits with helmets">
+                    </div>
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption slide-in-right">
+                        <div class="caption-title">Her crew</div>
+                        <div class="caption-text">
+                            She's part of a seasoned crew of 25th century thieves who have planned the score of a lifetime: 
+                            robbing the enormous ark spacecraft The Demata while nearly every passenger is in deep-space sleep 
+                            deep in stasis for the journey to an outer-colony.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/crew-intro.mp4"></div>
+            </div>
+        </div>
+
+        <!-- Transition Frame -->
+        <div class="transition-frame" data-video-ready="true" data-transition-type="fade">
+            <!-- Empty transition frame with gradient background -->
+        </div>
+
+        <!-- Brainer Introduction -->
+        <div class="frame-container" data-video-ready="true" data-scene="brainer-intro">
+            <div class="frame-inner cinematic-ratio">
+                <div class="content-layer">
+                    <img src="processed_assets/brainers/brainer_page-08.png.webp" alt="Close-up of Brainer creature with viscous, dripping features">
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption slide-in-left">
+                        <div class="caption-title">The brainers</div>
+                        <div class="caption-text">
+                            The entire ship's been infected with gnarly virus that has subsumed its several-thousand
+                            passengers in a strange symbiotic substance, turning them into snarling, brain-eating zombies.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/brainer-intro.mp4"></div>
+            </div>
+        </div>
+
+        <!-- Stasis Chamber -->
+        <div class="frame-container" data-video-ready="true" data-scene="stasis-chamber">
+            <div class="frame-inner cinematic-ratio">
+                <div class="content-layer">
+                    <img src="processed_assets/environments/stasis_chamber.webp" alt="Wide shot of stasis chamber with rows of white pods">
+                </div>
+                <div class="overlay-layer">
+                    <div class="caption slide-in-right">
+                        <div class="caption-title">The Demata</div>
+                        <div class="caption-text">
+                            The stasis chamber stretches endlessly, housing thousands of passengers.
+                            But something has gone terribly wrong during the journey.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/stasis-chamber.mp4"></div>
+            </div>
+        </div>
+
+        <!-- Split Panel Example -->
+        <div class="split-panel" data-video-ready="true" data-scene="split-reactions">
+            <div class="split-panel-item fade-in">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/gaia_page-05.png.webp" alt="Gaia reacting to discovery">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="split-panel-item fade-in">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/crew.webp" alt="Crew member looking horrified" style="filter: brightness(0.8) contrast(1.2);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay-layer" style="top: 100%;">
+                <div class="caption" style="width: 100%; max-width: 100%;">
+                    <div class="caption-text">
+                        The crew realizes the extent of the infection. Their simple heist has become a fight for survival.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue Example -->
+        <div class="frame-container" data-video-ready="true" data-scene="dialogue-scene">
+            <div class="character-frame">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/gaia_page-04.png.webp" alt="Gaia speaking to crew">
+                        </div>
+                    </div>
+                    <div class="overlay-layer">
+                        <div class="dialogue-bubble slide-in-left">
+                            <div class="dialogue-character">GAIA</div>
+                            Lane's gone. I can't hear him anymore.
+                        </div>
+                        <div class="dialogue-bubble right slide-in-right">
+                            <div class="dialogue-character">RILKEY</div>
+                            What do you mean gone? He's in your head.
+                        </div>
+                        <div class="dialogue-bubble slide-in-left">
+                            <div class="dialogue-character">GAIA</div>
+                            Not anymore. Something's wrong.
+                        </div>
+                    </div>
+                    <div class="video-layer" data-video-src="future-videos/dialogue-scene.mp4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Sequence Example -->
+        <div class="frame-container" data-video-ready="true" data-scene="chase-sequence">
+            <div class="action-frame">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div style="width: 100%; height: 100%; background-color: var(--space-black); position: relative; overflow: hidden;">
+                            <img src="processed_assets/environments/environment_page-02.png.webp" alt="Corridor background" style="position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                            <img src="processed_assets/brainers/brainer_page-09.png.webp" alt="Brainer chasing" style="position: absolute; width: 50%; height: auto; right: -10%; bottom: 0; transform: scaleX(-1); filter: brightness(0.7);">
+                        </div>
+                    </div>
+                    <div class="overlay-layer">
+                        <div class="caption slide-in-right">
+                            <div class="caption-text">
+                                They run through the narrow corridors, the sounds of snarling Brainers echoing behind them.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-layer" data-video-src="future-videos/chase-sequence.mp4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brainer Attack -->
+        <div class="frame-container" data-video-ready="true" data-scene="brainer-attack">
+            <div class="frame-inner cinematic-ratio">
+                <div class="content-layer">
+                    <img src="processed_assets/brainers/brainer_page-09.png.webp" alt="Brainer attacking" style="filter: contrast(1.2) brightness(0.8);">
+                </div>
+                <div class="overlay-layer">
+                    <div class="sound-effect" style="font-size: 3rem; position: absolute; top: 30%; right: 20%;">SNARL!</div>
+                    <div class="caption slide-in-left">
+                        <div class="caption-text">
+                            It moves faster than they expected, viscous tendrils reaching out.
+                        </div>
+                    </div>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/brainer-attack.mp4"></div>
+            </div>
+        </div>
+
+        <!-- The Voice Returns -->
+        <div class="frame-container" data-video-ready="true" data-scene="voice-returns">
+            <div class="character-frame">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/gaia_page-05.png.webp" alt="Gaia hearing Lane's voice" style="filter: brightness(0.7) contrast(1.3);">
+                        </div>
+                    </div>
+                    <div class="overlay-layer">
+                        <div class="caption slide-in-right">
+                            <div class="caption-text">
+                                And then, faintly at first, she hears Lane's voice again. But something is different.
+                            </div>
+                        </div>
+                        <div class="dialogue-bubble" style="font-style: italic; background-color: rgba(57, 197, 185, 0.2); border-color: var(--brainer-blue); color: var(--clinical-white);">
+                            <div class="dialogue-character" style="color: var(--brainer-blue);">LANE'S VOICE</div>
+                            Gaia... help me... I'm still here...
+                        </div>
+                    </div>
+                    <div class="video-layer" data-video-src="future-videos/voice-returns.mp4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Decision -->
+        <div class="frame-container" data-video-ready="true" data-scene="final-decision">
+            <div class="character-frame">
+                <div class="frame-inner standard-ratio">
+                    <div class="content-layer">
+                        <div class="gorey-character">
+                            <img src="processed_assets/characters/gaia_page-04.png.webp" alt="Gaia making a decision" style="filter: brightness(1.1) contrast(1.1);">
+                        </div>
+                    </div>
+                    <div class="overlay-layer">
+                        <div class="dialogue-bubble slide-in-left">
+                            <div class="dialogue-character">GAIA</div>
+                            We're staying. We're going to find Lane.
+                        </div>
+                        <div class="dialogue-bubble right slide-in-right">
+                            <div class="dialogue-character">RILKEY</div>
+                            And then what?
+                        </div>
+                        <div class="dialogue-bubble slide-in-left">
+                            <div class="dialogue-character">GAIA</div>
+                            Then we bring peace.
+                        </div>
+                    </div>
+                    <div class="video-layer" data-video-src="future-videos/final-decision.mp4"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="decorative-line"></div>
+        <div class="decorative-symbol">✧</div>
+        <div class="decorative-line"></div>
+
+        <!-- Final Frame -->
+        <div class="frame-container" data-video-ready="true" data-scene="final-shot">
+            <div class="full-width-frame">
+                <div class="content-layer" data-parallax="0.1">
+                    <img src="processed_assets/environments/demata_exterior.webp" alt="The Demata spacecraft against starry background">
+                </div>
+                <div class="overlay-layer" style="justify-content: center; align-items: center;">
+                    <h1 class="title fade-in">PEACE</h1>
+                    <h2 class="subtitle fade-in">To be continued...</h2>
+                </div>
+                <div class="video-layer" data-video-src="future-videos/final-shot.mp4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
